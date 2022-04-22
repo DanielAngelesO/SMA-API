@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>SMA.APIBusiness.DBEntity</RootNamespace>
+    <AssemblyName>SMA.APIBusiness.DBEntity</AssemblyName>
+  </PropertyGroup>
+
+</Project>

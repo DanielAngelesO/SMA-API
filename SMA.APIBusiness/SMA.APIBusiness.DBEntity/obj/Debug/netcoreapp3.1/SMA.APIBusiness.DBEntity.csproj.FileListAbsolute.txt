@@ -1,0 +1,10 @@
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\bin\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.deps.json
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\bin\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.dll
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\bin\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.pdb
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.csproj.AssemblyReference.cache
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.GeneratedMSBuildEditorConfig.editorconfig
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.AssemblyInfoInputs.cache
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.AssemblyInfo.cs
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.csproj.CoreCompileInputs.cache
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.dll
+D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.pdb

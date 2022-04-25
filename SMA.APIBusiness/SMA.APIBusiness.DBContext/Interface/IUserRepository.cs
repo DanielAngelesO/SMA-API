@@ -8,5 +8,7 @@ namespace DBContext
     public interface IUserRepository
     {
         List<EntityUser> GetUsers();
+        EntityBaseResponse ValidarUsuario(string Usuario, string Password);
+
     }
 }

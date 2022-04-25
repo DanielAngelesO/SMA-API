@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
+
 namespace DBEntity
 {
-    public class EntityUser : EntityBase
+    public class EntityUsuario: EntityBase
     {
         public string Usuario { get; set; }
-        public string Nombres { get; set; }
+        public string Nombre { get; set; }
         public string Apellidos { get; set; }
-        public string Contrasenia { get; set; }
-        public string Perfil { get; set; }        
+        public string Perfil { get; set; }
+
     }
 }

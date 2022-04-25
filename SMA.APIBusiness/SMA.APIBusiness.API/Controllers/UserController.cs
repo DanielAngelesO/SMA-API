@@ -41,8 +41,7 @@ namespace SMA.Business.API.Controllers
         /// GetListUser
         /// </summary>
         /// <returns></returns>
-        [Produces("application/json")]
-        [SwaggerOperation("GetListUser")]
+        [Produces("application/json")]        
         [AllowAnonymous]
         [HttpGet]
         [Route("GetListUser")]
@@ -55,5 +54,26 @@ namespace SMA.Business.API.Controllers
 
             return Json(ret);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Usuario"></param>
+        /// <param name="Password"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("Validar")]
+        public ActionResult ValidarUsuario(string Usuario, string Password)
+        {
+            var Response = _UserRepository.ValidarUsuario(Usuario, Password);
+
+            if (Response == null)
+                return StatusCode(401);
+
+            return Json(Response);
+        }
+
     }
 }

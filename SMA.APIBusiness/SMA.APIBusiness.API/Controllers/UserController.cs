@@ -41,7 +41,7 @@ namespace SMA.Business.API.Controllers
         /// GetListUser
         /// </summary>
         /// <returns></returns>
-        [Produces("application/json")]        
+        [Produces("application/json")] 
         [AllowAnonymous]
         [HttpGet]
         [Route("GetListUser")]
@@ -63,7 +63,7 @@ namespace SMA.Business.API.Controllers
         /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
-        [HttpGet]
+        [HttpPost]
         [Route("Validar")]
         public ActionResult ValidarUsuario(string Usuario, string Password)
         {

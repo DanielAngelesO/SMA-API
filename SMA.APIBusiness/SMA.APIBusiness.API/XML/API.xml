@@ -262,6 +262,28 @@
             <param name="app"></param>
             <param name="env"></param>
         </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.OrdenServicioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.OrdenServicioController._OrdenServicio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.#ctor(DBContext.IOrdenServicio)">
+            <summary>
+            
+            </summary>
+            <param name="OrdenServicio"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.GetOrdenes">
+            <summary>
+            
+            </summary>
+            <returns></returns>        
+        </member>
         <member name="T:SMA.Business.API.Controllers.UserController">
             <summary>
             
@@ -282,6 +304,14 @@
             <summary>
             GetListUser
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SMA.Business.API.Controllers.UserController.ValidarUsuario(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Password"></param>
             <returns></returns>
         </member>
         <member name="T:SMA.E31A.APIBusiness.API.Security.AccessToken">

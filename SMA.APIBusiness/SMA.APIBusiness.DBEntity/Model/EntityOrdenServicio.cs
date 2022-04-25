@@ -11,6 +11,8 @@ namespace DBEntity
         public DateTime Fecha_Tentativa { get; set; }
         public string Usuario_Registro { get; set; }
         public string Estado_Solicitud { get; set; }
+        public string Cod_Servicio { get; set; }
+
 
 
     }

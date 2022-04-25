@@ -8,3 +8,5 @@ D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\ne
 D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.csproj.CoreCompileInputs.cache
 D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.dll
 D:\git-repositorios\SMA BE\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.pdb
+D:\PERSONAL\UPC\DEV WEB\Proyecto Backend\SMA-API\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.dll
+D:\PERSONAL\UPC\DEV WEB\Proyecto Backend\SMA-API\SMA.APIBusiness\SMA.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.pdb

@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SMA.APIBusiness",
+    "\\SMA.APIBusiness\\SMA.APIBusiness.DBContext",
+    "\\SMA.APIBusiness\\SMA.APIBusiness.DBContext\\Interface",
+    "\\SMA.APIBusiness\\SMA.APIBusiness.DBContext\\Repository",
+    "\\SMA.APIBusiness\\SMA.APIBusiness.DBEntity",
+    "\\SMA.APIBusiness\\SMA.APIBusiness.DBEntity\\Base",
+    "\\SMA.APIBusiness\\SMA.APIBusiness.DBEntity\\Model"
+  ],
+  "SelectedNode": "\\SMA.APIBusiness\\SMA.APIBusiness.DBContext\\Repository\\UserRepository.cs",
+  "PreviewInSolutionExplorer": false
+}

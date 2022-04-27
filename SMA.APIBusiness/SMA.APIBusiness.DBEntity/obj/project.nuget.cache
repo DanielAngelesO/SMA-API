@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eAEIYbLY0Ceq0k6tGbE1ardS0uCfGtVwfbYpwnHQ21SQnBT2uXzVLWISUcLpRocUFVEt9ENrfejpZGG0x6TC/Q==",
+  "dgSpecHash": "Z6Slq1+zAYhjuedHOALO4trI8gp+q83oFEikjFNG9trzQQcuP0iWEw2HFX4j5KEFB46EvnfmvkeULkp17z0L6A==",
   "success": true,
-  "projectFilePath": "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.DBEntity\\SMA.APIBusiness.DBEntity.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\HASS\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\HASS\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\HASS\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.DBEntity\\SMA.APIBusiness.DBEntity.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

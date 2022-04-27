@@ -9161,19 +9161,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HASS\\.nuget\\packages\\": {}
+    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.UnitTest\\SMA.APIBusiness.UnitTest.csproj",
+      "projectUniqueName": "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.UnitTest\\SMA.APIBusiness.UnitTest.csproj",
       "projectName": "SMA.APIBusiness.UnitTest",
-      "projectPath": "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.UnitTest\\SMA.APIBusiness.UnitTest.csproj",
-      "packagesPath": "C:\\Users\\HASS\\.nuget\\packages\\",
-      "outputPath": "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.UnitTest\\obj\\",
+      "projectPath": "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.UnitTest\\SMA.APIBusiness.UnitTest.csproj",
+      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "outputPath": "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HASS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9187,11 +9187,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.API\\SMA.APIBusiness.API.csproj": {
-              "projectPath": "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.API\\SMA.APIBusiness.API.csproj"
+            "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.API\\SMA.APIBusiness.API.csproj": {
+              "projectPath": "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.API\\SMA.APIBusiness.API.csproj"
             },
-            "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.DBContext\\SMA.APIBusiness.DBContext.csproj": {
-              "projectPath": "D:\\PERSONAL\\UPC\\DEV WEB\\Proyecto Backend\\SMA-API\\SMA.APIBusiness\\SMA.APIBusiness.DBContext\\SMA.APIBusiness.DBContext.csproj"
+            "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.DBContext\\SMA.APIBusiness.DBContext.csproj": {
+              "projectPath": "D:\\git-repositorios\\SMA BE\\SMA.APIBusiness\\SMA.APIBusiness.DBContext\\SMA.APIBusiness.DBContext.csproj"
             }
           }
         }
@@ -9229,20 +9229,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"

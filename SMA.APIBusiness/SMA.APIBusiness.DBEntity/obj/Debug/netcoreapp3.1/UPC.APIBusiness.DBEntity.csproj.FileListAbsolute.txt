@@ -1,8 +1,0 @@
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\bin\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.deps.json
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\bin\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.dll
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\bin\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.pdb
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.AssemblyInfoInputs.cache
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.AssemblyInfo.cs
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.csproj.CoreCompileInputs.cache
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.dll
-C:\Users\James\source\repos\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness\SMA.E31A.APIBusiness.DBEntity\obj\Debug\netcoreapp3.1\SMA.APIBusiness.DBEntity.pdb

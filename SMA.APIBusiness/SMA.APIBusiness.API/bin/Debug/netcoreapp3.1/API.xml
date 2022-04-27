@@ -284,6 +284,14 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:SMA.Business.API.Controllers.UserController.ValidarUsuario(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Usuario"></param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
         <member name="T:SMA.E31A.APIBusiness.API.Security.AccessToken">
             <summary>
             

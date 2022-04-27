@@ -262,6 +262,28 @@
             <param name="app"></param>
             <param name="env"></param>
         </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.OrdenServicioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.OrdenServicioController._OrdenServicio">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.#ctor(DBContext.IOrdenServicio)">
+            <summary>
+            
+            </summary>
+            <param name="OrdenServicio"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.GetOrdenes">
+            <summary>
+            
+            </summary>
+            <returns></returns>        
+        </member>
         <member name="T:SMA.Business.API.Controllers.UserController">
             <summary>
             

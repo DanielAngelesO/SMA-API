@@ -10,6 +10,7 @@ using System.Net;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using API.Security;
 
 namespace SMA.Business.API.Controllers
 {
@@ -38,41 +39,34 @@ namespace SMA.Business.API.Controllers
         }
 
         /// <summary>
-        /// GetListUser
-        /// </summary>
-        /// <returns></returns>
-        [Produces("application/json")] 
-        [AllowAnonymous]
-        [HttpGet]
-        [Route("GetListUser")]
-        public ActionResult Get()
-        {
-            var ret = _UserRepository.GetUsers();
-
-            if (ret == null)
-                return StatusCode(401);
-
-            return Json(ret);
-        }
-
-        /// <summary>
         /// 
         /// </summary>
-        /// <param name="Usuario"></param>
-        /// <param name="Password"></param>
+        /// <param name="login"></param>
         /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
         [HttpPost]
         [Route("Validar")]
-        public ActionResult ValidarUsuario(string Usuario, string Password)
+        public async Task<ActionResult> ValidarUsuario(EntityLogin login)
         {
-            var Response = _UserRepository.ValidarUsuario(Usuario, Password);
+            var ret = _UserRepository.ValidarUsuario(login);
 
-            if (Response == null)
-                return StatusCode(401);
+            if (ret.Issuccess)
+            {
+                var loginResponse = ret.Data as EntityLoginResponse;
+                var UserId = loginResponse.Usuario;
+                var UserPerfil = loginResponse.Perfil;
 
-            return Json(Response);
+                var token = JsonConvert.DeserializeObject<AccessToken>(
+                    await new Authentication().GenerateToken(UserPerfil, UserId)
+                    ).access_token;
+
+                loginResponse.Token = token;
+                ret.Data = loginResponse;
+            }
+
+
+            return Json(ret);
         }
 
     }

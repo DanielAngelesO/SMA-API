@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SMA.E31A.APIBusiness.API.Security
+namespace API.Security
 {
     /// <summary>
     /// 

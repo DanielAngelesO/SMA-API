@@ -15,8 +15,7 @@ namespace DBContext
             var returnEntity = new List<EntityUser>();
             using (var db = GetSqlConnection())
             {
-                const string sql = @"usp_ObtenerDepartamentos";
-
+                const string sql = @"";
 
                 returnEntity = db.Query<EntityUser>(sql,
                     commandType: CommandType.StoredProcedure).ToList();
@@ -24,7 +23,7 @@ namespace DBContext
             return returnEntity;
         }
 
-        public EntityBaseResponse ValidarUsuario(string Usuario, string Password)
+        public EntityBaseResponse ValidarUsuario(EntityLogin login)
         {
             var response = new EntityBaseResponse();
 
@@ -32,24 +31,24 @@ namespace DBContext
             {
                 using (var db = GetSqlConnection())
                 {
-                    var ListUser = new List<EntityUser>();
+                    var UsuarioResponse = new EntityLoginResponse();
                     const string sql = @"usp_ValidarUsuario";
                     var p = new DynamicParameters();
-                    p.Add(name: "@Usuario", value: Usuario, dbType: DbType.String, direction: ParameterDirection.Input);
-                    p.Add(name: "@Password", value: Password, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@Usuario", value: login.Usuario, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@Password", value: login.Password, dbType: DbType.String, direction: ParameterDirection.Input);
 
 
-                    ListUser = db.Query<EntityUser>(
+                    UsuarioResponse = db.Query<EntityLoginResponse>(
                         sql: sql,
                         param: p,
-                        commandType: CommandType.StoredProcedure).ToList();
+                        commandType: CommandType.StoredProcedure).FirstOrDefault();
 
-                    if (ListUser.Count > 0)
+                    if (UsuarioResponse != null)
                     {
                         response.Issuccess = true;
                         response.ErrorCode = "0000";
                         response.ErrorMessage = String.Empty;
-                        response.Data = ListUser;
+                        response.Data = UsuarioResponse;
 
                     }
                     else
@@ -57,12 +56,9 @@ namespace DBContext
                         response.Issuccess = false;
                         response.ErrorCode = "0000";
                         response.ErrorMessage = String.Empty;
-                        response.Data = ListUser;
+                        response.Data = null;
                     }
                 }
-
-
-
 
             }
             catch (Exception ex)

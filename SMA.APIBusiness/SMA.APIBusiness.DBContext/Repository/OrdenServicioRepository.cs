@@ -18,9 +18,9 @@ namespace DBContext
             {
                 using (var db = GetSqlConnection())
                 {
-                    var servicio = new List<EntityOrdenServicio>();
-                    const string sql = "";
-                    servicio = db.Query<EntityOrdenServicio>(
+                    var servicio = new List<EntityOrdenServcioConsulta>();
+                    const string sql = "usp_ListarOrdenesServicios";
+                    servicio = db.Query<EntityOrdenServcioConsulta>(
                             sql: sql,
                             commandType: CommandType.StoredProcedure
                         ).ToList();
@@ -53,7 +53,7 @@ namespace DBContext
             return response;
         }
 
-        public EntityBaseResponse InsertOrdenServicio(EntityOrdenServicio ordenServicio, EntityCliente cliente)
+        public EntityBaseResponse InsertOrdenServicio(EntityOrdenServicio ordenServicio)
         {
             var response = new EntityBaseResponse();
             try
@@ -64,11 +64,11 @@ namespace DBContext
                     var p = new DynamicParameters();
 
                     p.Add(name: "@IDSOLICITUD", dbType: DbType.Int32, direction: ParameterDirection.Output);
-                    p.Add(name: "@RUC_CLIENTE", value: cliente.Ruc_Cliente, dbType: DbType.String, direction: ParameterDirection.Input);
-                    p.Add(name: "@RAZON_SOCIAL", value: cliente.Razon_Social, dbType: DbType.Decimal, direction: ParameterDirection.Input);
-                    p.Add(name: "@CORREO", value: cliente.Correo, dbType: DbType.String, direction: ParameterDirection.Input);
-                    p.Add(name: "@TELEFONO", value: cliente.Telefeono, dbType: DbType.String, direction: ParameterDirection.Input);
-                    p.Add(name: "@CONTACTO", value: cliente.Contacto, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@RUC_CLIENTE", value: ordenServicio.Cliente.Ruc_Cliente, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@RAZON_SOCIAL", value: ordenServicio.Cliente.Razon_Social, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+                    p.Add(name: "@CORREO", value: ordenServicio.Cliente.Correo, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@TELEFONO", value: ordenServicio.Cliente.Telefeono, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@CONTACTO", value: ordenServicio.Cliente.Contacto, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@COD_SERVICIO", value: ordenServicio.Cod_Servicio , dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@FECHA_SOLICITUD", value: ordenServicio.Fecha_Solicitud, dbType: DbType.DateTime, direction: ParameterDirection.Input);
                     p.Add(name: "@FECHA_TENTATIVA", value: ordenServicio.Fecha_Tentativa, dbType: DbType.String, direction: ParameterDirection.Input);
@@ -91,7 +91,7 @@ namespace DBContext
                         response.Data = new
                         {
                             id = IdSolicitud,
-                            nombre = cliente.Razon_Social
+                            nombre = ordenServicio.Cliente.Razon_Social
                         };
                     }
                     else

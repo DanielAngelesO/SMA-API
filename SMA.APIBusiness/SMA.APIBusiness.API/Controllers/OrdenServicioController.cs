@@ -51,14 +51,27 @@ namespace SMA.APIBusiness.API.Controllers
 
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="servicio"></param>
+        /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
         [HttpPost]
         [Route("insert")]
-        public ActionResult Insert(EntityOrdenServicio servicio, EntityCliente cliente)
+        public ActionResult Insert(EntityOrdenServicio servicio)
         {
-            var ret = _OrdenServicio.InsertOrdenServicio(servicio, cliente);
+            var identity = User.Identity as ClaimsIdentity;
+            IEnumerable<Claim> claims = identity.Claims;
+
+            var userid = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
+            var useidn = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
+
+            servicio.Usuario_Registro = userid;
+
+
+            var ret = _OrdenServicio.InsertOrdenServicio(servicio); 
             return Json(ret);
         }
 

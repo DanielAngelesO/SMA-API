@@ -11,6 +11,6 @@ namespace DBContext
     public interface IOrdenServicio
     {
         EntityBaseResponse GetOrdenServicioList();
-        EntityBaseResponse InsertOrdenServicio(EntityOrdenServicio ordenServicio, EntityCliente cliente);
+        EntityBaseResponse InsertOrdenServicio(EntityOrdenServicio ordenServicio);
     }
 }

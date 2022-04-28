@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DBEntity
 {
-    public class EntityLugarsMuestro
+    public class EntityLugaresMuestreo
     {
         public int CodigoMuestreo { get; set; }
         public int CodigoSolicitud { get; set; }

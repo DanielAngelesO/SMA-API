@@ -233,6 +233,42 @@
             <param name="cancellationToken"></param>
             <returns></returns>
         </member>
+        <member name="T:API.Security.AccessToken">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:API.Security.AccessToken.access_token">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:API.Security.AccessToken.token_type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:API.Security.AccessToken.scope">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:API.Security.AccessToken.expires_in">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:API.Security.Authentication">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:API.Security.Authentication.GenerateToken(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:API.Startup">
             <summary>
             /
@@ -284,6 +320,13 @@
             </summary>
             <returns></returns>        
         </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.Insert(DBEntity.EntityOrdenServicio)">
+            <summary>
+            
+            </summary>
+            <param name="servicio"></param>
+            <returns></returns>
+        </member>
         <member name="T:SMA.Business.API.Controllers.UserController">
             <summary>
             
@@ -300,54 +343,11 @@
             </summary>
             <param name="UserRepository"></param>
         </member>
-        <member name="M:SMA.Business.API.Controllers.UserController.Get">
-            <summary>
-            GetListUser
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:SMA.Business.API.Controllers.UserController.ValidarUsuario(System.String,System.String)">
+        <member name="M:SMA.Business.API.Controllers.UserController.ValidarUsuario(DBEntity.EntityLogin)">
             <summary>
             
             </summary>
-            <param name="Usuario"></param>
-            <param name="Password"></param>
-            <returns></returns>
-        </member>
-        <member name="T:SMA.E31A.APIBusiness.API.Security.AccessToken">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:SMA.E31A.APIBusiness.API.Security.AccessToken.access_token">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:SMA.E31A.APIBusiness.API.Security.AccessToken.token_type">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:SMA.E31A.APIBusiness.API.Security.AccessToken.scope">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="P:SMA.E31A.APIBusiness.API.Security.AccessToken.expires_in">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="T:SMA.E31A.APIBusiness.API.Security.Authentication">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:SMA.E31A.APIBusiness.API.Security.Authentication.GenerateToken(System.String,System.String)">
-            <summary>
-            
-            </summary>
+            <param name="login"></param>
             <returns></returns>
         </member>
     </members>

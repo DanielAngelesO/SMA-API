@@ -122,6 +122,7 @@ namespace API
 
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IOrdenServicio, OrdenServicioRepository>();
+            services.AddTransient<ILugaresMuestreoRepository, LugaresMuestreoRepository>();
 
 
             // ----------------------------------------------------------------

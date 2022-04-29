@@ -9,5 +9,7 @@ namespace SMA.APIBusiness.DBContext.Interface
     {
         EntityBaseResponse GetAnalistaProyectoRepository();
         EntityBaseResponse ObtenerAnalista(string Codigo_Analista);
+
+        EntityBaseResponse Insert(List<EntityAnalistaProyecto> Analistas);
     }
 }

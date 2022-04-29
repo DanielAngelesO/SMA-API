@@ -7,7 +7,8 @@ namespace SMA.APIBusiness.DBContext.Interface
 {
     internal interface IEquiposProyectoRepository
     {
-        EntityBaseResponse GetEquipoProyectoRepository();
-        EntityBaseResponse ValidarEquiposProyecto(int Codigo_Equipo, int Codigo_Proyecto);
+        EntityBaseResponse GetEquipoProyectoRepository();        
+
+        EntityBaseResponse Insert(List<EntityEquiposProyecto> equipos);
     }
 }

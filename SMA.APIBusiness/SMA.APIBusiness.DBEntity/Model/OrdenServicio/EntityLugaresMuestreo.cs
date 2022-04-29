@@ -6,14 +6,12 @@ namespace DBEntity
 {
     public class EntityLugaresMuestreo
     {
-        public int CodigoMuestreo { get; set; }
-        public int CodigoSolicitud { get; set; }
-        public string LugarMuestro { get; set; }
-        public string Lontigitud { get; set; }
-        public string Latitud { get; set; }
-        public string NombrePunto { get; set; }
-
-
+        public int Cod_Solicitud { get; set; }
+        public int Codigo_Muestreo { get; set; }
+        public string Lugar_Muestreo { get; set; }
+        public string Coordenada_Lontigitud { get; set; }
+        public string Coordenada_Latitud { get; set; }
+        public string Nombre_Punto { get; set; }
 
     }
 }

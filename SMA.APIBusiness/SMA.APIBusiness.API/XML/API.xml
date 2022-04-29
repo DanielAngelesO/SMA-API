@@ -298,6 +298,32 @@
             <param name="app"></param>
             <param name="env"></param>
         </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.AnalistasProyectoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.EquiposProyectoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.LugaresMuestreoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.LugaresMuestreoController._LugaresMuestreo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.LugaresMuestreoController.#ctor(DBContext.ILugaresMuestreoRepository)">
+            <summary>
+            
+            </summary>
+            <param name="OrdenServicio"></param>
+        </member>
         <member name="T:SMA.APIBusiness.API.Controllers.OrdenServicioController">
             <summary>
             
@@ -326,6 +352,11 @@
             </summary>
             <param name="servicio"></param>
             <returns></returns>
+        </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.PlanProyectoController">
+            <summary>
+            
+            </summary>
         </member>
         <member name="T:SMA.Business.API.Controllers.UserController">
             <summary>

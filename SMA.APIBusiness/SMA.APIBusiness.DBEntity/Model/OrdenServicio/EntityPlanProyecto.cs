@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBEntity.Model
+namespace DBEntity
 {
-    internal class EntityPlanProyecto
+    public class EntityPlanProyecto
     {
-        public int Codigo_Cliente { get; set; }
+        public int Codigo_Solicitud { get; set; }
         public DateTime Fecha_Inicio { get; set; }
         public DateTime Fecha_Fin { get; set; }
         public int Dias_Monitoreo { get; set; }
         public int Cantidad_Analista { get; set; }
         public decimal Monto_Viaticos { get; set; }
         public decimal Precio_Final_Servicio { get; set; }
+
     }
 }

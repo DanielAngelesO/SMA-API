@@ -18,6 +18,7 @@ namespace SMA.APIBusiness.API.Controllers
     /// </summary>
     [Produces("application/json")]
     [Route("api/OrdenServicio")]
+    [ApiController]
     public class OrdenServicioController : Controller
     {
         /// <summary>
@@ -32,7 +33,6 @@ namespace SMA.APIBusiness.API.Controllers
         public OrdenServicioController(IOrdenServicio OrdenServicio)
         {
             _OrdenServicio = OrdenServicio;
-
         }
 
         /// <summary>
@@ -62,13 +62,13 @@ namespace SMA.APIBusiness.API.Controllers
         [Route("insert")]
         public ActionResult Insert(EntityOrdenServicio servicio)
         {
-            var identity = User.Identity as ClaimsIdentity;
-            IEnumerable<Claim> claims = identity.Claims;
+            //var identity = User.Identity as ClaimsIdentity;
+            //IEnumerable<Claim> claims = identity.Claims;
 
-            var userid = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
-            var useidn = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
+            //var userid = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
+            //var useidn = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
 
-            servicio.Usuario_Registro = userid;
+            //servicio.Usuario_Registro = userid;
 
 
             var ret = _OrdenServicio.InsertOrdenServicio(servicio); 

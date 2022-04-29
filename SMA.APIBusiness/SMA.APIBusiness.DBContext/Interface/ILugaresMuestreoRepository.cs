@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBContext.Interface
+namespace DBContext
 {
-    internal interface ILugaresMuestreoRepository
+    public interface ILugaresMuestreoRepository
     {
         EntityBaseResponse GetLugaresMuestreoRepository();
         EntityBaseResponse ListLugarProyecto(int Codigo_Cliente);
+
+        EntityBaseResponse Insert(List<EntityLugaresMuestreo> muestreos);
     }
 }

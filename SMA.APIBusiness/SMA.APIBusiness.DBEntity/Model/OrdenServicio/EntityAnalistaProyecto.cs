@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBEntity.Model
+namespace DBEntity
 {
-    internal class EntityAnalistaProyecto
+    public class EntityAnalistaProyecto
     {
-        public int Codigo_Cliente { get; set; }
+        public int Codigo_Solicitud { get; set; }
         public int Codigo_Analista { get; set; }
         public string Cargo { get; set; }
         public string Tarea_Asignada { get; set; }

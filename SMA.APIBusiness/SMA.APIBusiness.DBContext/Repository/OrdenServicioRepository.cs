@@ -65,13 +65,13 @@ namespace DBContext
 
                     p.Add(name: "@IDSOLICITUD", dbType: DbType.Int32, direction: ParameterDirection.Output);
                     p.Add(name: "@RUC_CLIENTE", value: ordenServicio.Cliente.Ruc_Cliente, dbType: DbType.String, direction: ParameterDirection.Input);
-                    p.Add(name: "@RAZON_SOCIAL", value: ordenServicio.Cliente.Razon_Social, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+                    p.Add(name: "@RAZON_SOCIAL", value: ordenServicio.Cliente.Razon_Social, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@CORREO", value: ordenServicio.Cliente.Correo, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@TELEFONO", value: ordenServicio.Cliente.Telefeono, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@CONTACTO", value: ordenServicio.Cliente.Contacto, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@COD_SERVICIO", value: ordenServicio.Cod_Servicio , dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@FECHA_SOLICITUD", value: ordenServicio.Fecha_Solicitud, dbType: DbType.DateTime, direction: ParameterDirection.Input);
-                    p.Add(name: "@FECHA_TENTATIVA", value: ordenServicio.Fecha_Tentativa, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@FECHA_TENTATIVA", value: ordenServicio.Fecha_Tentativa, dbType: DbType.DateTime, direction: ParameterDirection.Input);
                     p.Add(name: "@USUARIO_REGISTRO", value: ordenServicio.Usuario_Registro, dbType: DbType.String, direction: ParameterDirection.Input);
 
 
@@ -81,18 +81,35 @@ namespace DBContext
                         commandType: CommandType.StoredProcedure
                         ).FirstOrDefault();
 
-                    int IdSolicitud = p.Get<int>("@IDPROYECTO");
+                    int IdSolicitud = p.Get<int>("@IDSOLICITUD");
 
                     if (IdSolicitud > 0)
                     {
-                        response.Issuccess = true;
-                        response.ErrorCode= "0000";
-                        response.ErrorMessage = String.Empty;
-                        response.Data = new
+                        var _LugaresMuestro = new LugaresMuestreoRepository();
+                        var responseLugares = _LugaresMuestro.Insert(IdSolicitud, ordenServicio.LugaresMuestreo);
+
+                        if (responseLugares.Issuccess)
                         {
-                            id = IdSolicitud,
-                            nombre = ordenServicio.Cliente.Razon_Social
-                        };
+                            response.Issuccess = true;
+                            response.ErrorCode = "0000";
+                            response.ErrorMessage = String.Empty;
+                            response.Data = new
+                            {
+                                id = IdSolicitud,
+                                nombre = ordenServicio.Cliente.Razon_Social
+                            };
+                        }
+                        else
+                        {
+                            response.Issuccess = false;
+                            response.ErrorCode = "0000";
+                            response.ErrorMessage = "Se creo la orden de servicio, pero no se completo el registro de lugares de muestro";
+                            response.Data = new
+                            {
+                                id = IdSolicitud,
+                                nombre = ordenServicio.Cliente.Razon_Social
+                            };
+                        }
                     }
                     else
                     {
@@ -101,7 +118,6 @@ namespace DBContext
                         response.ErrorMessage = String.Empty;
                         response.Data = null;
                     }
-
                 }
             }
             catch (Exception ex)

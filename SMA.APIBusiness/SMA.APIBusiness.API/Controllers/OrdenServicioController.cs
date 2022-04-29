@@ -34,22 +34,20 @@ namespace SMA.APIBusiness.API.Controllers
         {
             _OrdenServicio = OrdenServicio;
         }
-
         /// <summary>
         /// 
         /// </summary>
-        /// <returns></returns>        
+        /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
-        [HttpGet]
+        [HttpPost]
         [Route("listar")]
-        public ActionResult GetOrdenes()
+        public ActionResult Listar()
         {
             var ret = _OrdenServicio.GetOrdenServicioList();
-
             return Json(ret);
-
         }
+
 
         /// <summary>
         /// 

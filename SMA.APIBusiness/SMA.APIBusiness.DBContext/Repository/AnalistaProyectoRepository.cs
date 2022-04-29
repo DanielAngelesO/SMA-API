@@ -36,7 +36,7 @@ namespace DBContext
 
                         p.Add(name: "@COD_SOLICTUD", value:item.Codigo_Solicitud, dbType: DbType.Int32, direction: ParameterDirection.Input);
                         p.Add(name: "@COD_ANALISTA", value: item.Codigo_Analista, dbType: DbType.String, direction: ParameterDirection.Input);
-                        p.Add(name: "@CARGO", value: item.Cargo, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+                        p.Add(name: "@CARGO", value: item.Cargo, dbType: DbType.String, direction: ParameterDirection.Input);
                         p.Add(name: "@TAREA_ASIGNADA", value: item.Tarea_Asignada, dbType: DbType.String, direction: ParameterDirection.Input);                        
 
                         db.Query<EntityAnalistaProyecto>(

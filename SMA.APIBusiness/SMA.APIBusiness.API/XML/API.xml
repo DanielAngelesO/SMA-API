@@ -303,10 +303,46 @@
             
             </summary>
         </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.AnalistasProyectoController._AnalistaProyecto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.AnalistasProyectoController.#ctor(DBContext.IAnalistaProyectoRepository)">
+            <summary>
+            
+            </summary>
+            <param name="AnalistaProyecto"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.AnalistasProyectoController.Insert(System.Collections.Generic.List{DBEntity.EntityAnalistaProyecto})">
+            <summary>
+            
+            </summary>
+            <param name="analistas"></param>
+            <returns></returns>
+        </member>
         <member name="T:SMA.APIBusiness.API.Controllers.EquiposProyectoController">
             <summary>
             
             </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.EquiposProyectoController._EquiposProyecto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.#ctor(DBContext.IEquiposProyectoRepository)">
+            <summary>
+            
+            </summary>
+            <param name="equiposProyecto"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.Insert(System.Collections.Generic.List{DBEntity.EntityEquiposProyecto})">
+            <summary>
+            
+            </summary>
+            <param name="equipos"></param>
+            <returns></returns>
         </member>
         <member name="T:SMA.APIBusiness.API.Controllers.LugaresMuestreoController">
             <summary>
@@ -324,6 +360,13 @@
             </summary>
             <param name="OrdenServicio"></param>
         </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.LugaresMuestreoController.Insert(System.Collections.Generic.List{DBEntity.EntityLugaresMuestreo})">
+            <summary>
+            
+            </summary>
+            <param name="lugares"></param>
+            <returns></returns>
+        </member>
         <member name="T:SMA.APIBusiness.API.Controllers.OrdenServicioController">
             <summary>
             
@@ -340,11 +383,11 @@
             </summary>
             <param name="OrdenServicio"></param>
         </member>
-        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.GetOrdenes">
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.Listar">
             <summary>
             
             </summary>
-            <returns></returns>        
+            <returns></returns>
         </member>
         <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.Insert(DBEntity.EntityOrdenServicio)">
             <summary>
@@ -357,6 +400,24 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.PlanProyectoController._planProyecto">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.PlanProyectoController.#ctor(DBContext.IPlanProyectoRepository)">
+            <summary>
+            
+            </summary>
+            <param name="planProyecto"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.PlanProyectoController.Insert(DBEntity.EntityPlanProyecto)">
+            <summary>
+            
+            </summary>
+            <param name="planProyecto"></param>
+            <returns></returns>
         </member>
         <member name="T:SMA.Business.API.Controllers.UserController">
             <summary>

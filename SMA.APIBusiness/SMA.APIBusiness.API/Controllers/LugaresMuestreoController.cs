@@ -35,6 +35,11 @@ namespace SMA.APIBusiness.API.Controllers
             _LugaresMuestreo = OrdenServicio;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="lugares"></param>
+        /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
         [HttpPost]

@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBContext.Interface
+namespace DBContext
 {
-    internal interface IPlanProyectoRepository
+    public interface IPlanProyectoRepository
     {
         EntityBaseResponse GetPlanProyectoRepository();
         EntityBaseResponse insert(EntityPlanProyecto plan);

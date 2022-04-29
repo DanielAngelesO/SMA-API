@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBContext.Interface
+namespace DBContext
 {
-    internal interface IEquiposProyectoRepository
+    public interface IEquiposProyectoRepository
     {
         EntityBaseResponse GetEquipoProyectoRepository();        
 

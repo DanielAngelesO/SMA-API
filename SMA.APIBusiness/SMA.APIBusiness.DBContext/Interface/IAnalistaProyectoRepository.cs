@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBContext.Interface
+namespace DBContext
 {
-    internal interface IAnalistaProyectoRepository
+    public interface IAnalistaProyectoRepository
     {
         EntityBaseResponse GetAnalistaProyectoRepository();
         EntityBaseResponse ObtenerAnalista(string Codigo_Analista);

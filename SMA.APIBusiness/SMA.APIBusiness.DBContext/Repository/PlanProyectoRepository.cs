@@ -26,7 +26,7 @@ namespace DBContext
                     const string sql = "US_Insertar_Plan_Proyecto";
                     var p = new DynamicParameters();
 
-                    p.Add(name: "@COD_SOLICITUD", value: plan.Codigo_Solicitud, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                    p.Add(name: "@COD_SOLICITUD", value: plan.Codigo_Solicitud, dbType: DbType.Int32, direction: ParameterDirection.Input);
                     p.Add(name: "@FECHA_INICIO", value: plan.Fecha_Inicio, dbType: DbType.DateTime, direction: ParameterDirection.Input);
                     p.Add(name: "@@FECHA_FIN", value: plan.Fecha_Fin, dbType: DbType.DateTime, direction: ParameterDirection.Input);
                     p.Add(name: "@DIAS_MONITOREO", value: plan.Dias_Monitoreo, dbType: DbType.Int32, direction: ParameterDirection.Input);

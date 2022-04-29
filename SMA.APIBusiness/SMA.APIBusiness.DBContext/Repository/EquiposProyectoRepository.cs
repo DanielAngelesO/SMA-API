@@ -31,10 +31,10 @@ namespace DBContext
 
                         p.Add(name: "@COD_SOLICTUD", value: item.Codigo_Solicitud, dbType: DbType.Int32, direction: ParameterDirection.Input);
                         p.Add(name: "@CODIGO_EQUIPO", value: item.Equipo, dbType: DbType.String, direction: ParameterDirection.Input);
-                        p.Add(name: "@CANTIDAD", value: item.Cantidad, dbType: DbType.Decimal, direction: ParameterDirection.Input);
+                        p.Add(name: "@CANTIDAD", value: item.Cantidad, dbType: DbType.Int32, direction: ParameterDirection.Input);
                         p.Add(name: "@MATRIZ", value: item.Matriz, dbType: DbType.String, direction: ParameterDirection.Input);
-                        p.Add(name: "@FECHA_SALIDA", value: item.Fecha_Salida, dbType: DbType.String, direction: ParameterDirection.Input);
-                        p.Add(name: "@FECHA_RETORNO", value: item.Fecha_Retorno, dbType: DbType.String, direction: ParameterDirection.Input);
+                        p.Add(name: "@FECHA_SALIDA", value: item.Fecha_Salida, dbType: DbType.DateTime, direction: ParameterDirection.Input);
+                        p.Add(name: "@FECHA_RETORNO", value: item.Fecha_Retorno, dbType: DbType.DateTime, direction: ParameterDirection.Input);
 
                         db.Query<EntityEquiposProyecto>(
                             sql,

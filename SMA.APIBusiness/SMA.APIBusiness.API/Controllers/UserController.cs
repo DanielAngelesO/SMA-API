@@ -19,6 +19,7 @@ namespace SMA.Business.API.Controllers
     /// </summary>
     [Produces("application/json")]
     [Route("api/User")]
+    [ApiController]
     public class UserController : Controller
     {
 

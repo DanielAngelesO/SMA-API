@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBContext.Interface
+namespace DBContext
 {
-    internal interface IPlanillaAnalistaRepository
+    public interface IPlanillaAnalistaRepository
     {
-        EntityBaseResponse GetPlanillaAnalistaRepository();
+        EntityBaseResponse GetAnalistas();
         EntityBaseResponse ValidarCeseAnalista(int Codigo_Analista);
     }
 }

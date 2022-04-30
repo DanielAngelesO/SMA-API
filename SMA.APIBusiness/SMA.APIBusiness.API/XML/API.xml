@@ -396,6 +396,22 @@
             <param name="servicio"></param>
             <returns></returns>
         </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.PlanillaAnalistaController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.PlanillaAnalistaController._planillaAnalistaRepository">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.PlanillaAnalistaController.#ctor(DBContext.IPlanillaAnalistaRepository)">
+            <summary>
+            
+            </summary>
+            <param name="planillaAnalistaRepository"></param>
+        </member>
         <member name="T:SMA.APIBusiness.API.Controllers.PlanProyectoController">
             <summary>
             

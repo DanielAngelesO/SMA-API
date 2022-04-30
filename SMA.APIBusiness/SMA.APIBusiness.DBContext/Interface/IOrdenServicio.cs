@@ -12,5 +12,6 @@ namespace DBContext
     {
         EntityBaseResponse GetOrdenServicioList();
         EntityBaseResponse InsertOrdenServicio(EntityOrdenServicio ordenServicio);
+
     }
 }

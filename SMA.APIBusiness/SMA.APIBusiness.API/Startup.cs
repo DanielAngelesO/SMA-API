@@ -126,6 +126,7 @@ namespace API
             services.AddTransient<IPlanProyectoRepository, PlanProyectoRepository>();
             services.AddTransient<IAnalistaProyectoRepository, AnalistaProyectoRepository>();
             services.AddTransient<IEquiposProyectoRepository, EquiposProyectoRepository>();
+            services.AddTransient<IPlanillaAnalistaRepository, PlanillaAnalistaRepository>();
             
 
 

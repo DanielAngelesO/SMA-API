@@ -7,7 +7,7 @@ namespace SMA.APIBusiness.DBContext.Interface
 {
     internal interface IEquipoRepository
     {
-        EntityBaseResponse GetEquipoRepository();
+        EntityBaseResponse ListarEquipos();
         EntityBaseResponse ListEquipoRepository(int Codigo_Equipo);
     }
 }

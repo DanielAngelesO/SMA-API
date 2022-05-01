@@ -42,7 +42,7 @@ namespace SMA.APIBusiness.API.Controllers
         /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
-        [HttpPost]
+        [HttpGet]
         [Route("listar")]
         public ActionResult Listar()
         {
@@ -52,7 +52,7 @@ namespace SMA.APIBusiness.API.Controllers
 
         [Produces("application/json")]
         [AllowAnonymous]
-        [HttpPost]
+        [HttpGet]
         [Route("listarxcodigo")]
         public ActionResult Listarxcodigo(string Codigo_Equipo)
         {

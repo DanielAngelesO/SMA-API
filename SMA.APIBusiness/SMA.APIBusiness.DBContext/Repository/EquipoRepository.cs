@@ -100,7 +100,5 @@ namespace DBContext
 
             return response;
         }
-
-        
-        }
+     }
 }

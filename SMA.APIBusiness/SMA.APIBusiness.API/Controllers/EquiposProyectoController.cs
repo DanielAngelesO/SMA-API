@@ -39,6 +39,21 @@ namespace SMA.APIBusiness.API.Controllers
         /// <summary>
         /// 
         /// </summary>
+        /// <param name="Codigo_Solicitud"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("listarxcodigo_solicitud")]
+        public ActionResult listarxcodigo(string Codigo_Solicitud)
+        {
+            var ret = _EquiposProyecto.GetEquipoProyectoRepository(Codigo_Solicitud);
+            return Json(ret);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="equipos"></param>
         /// <returns></returns>
         [Produces("application/json")]

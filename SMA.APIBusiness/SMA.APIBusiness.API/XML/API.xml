@@ -314,6 +314,13 @@
             </summary>
             <param name="AnalistaProyecto"></param>
         </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.AnalistasProyectoController.listarxcodigo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Codigo_Solicitud"></param>
+            <returns></returns>
+        </member>
         <member name="M:SMA.APIBusiness.API.Controllers.AnalistasProyectoController.Insert(System.Collections.Generic.List{DBEntity.EntityAnalistaProyecto})">
             <summary>
             
@@ -358,6 +365,13 @@
             
             </summary>
             <param name="equiposProyecto"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.listarxcodigo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Codigo_Solicitud"></param>
+            <returns></returns>
         </member>
         <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.Insert(System.Collections.Generic.List{DBEntity.EntityEquiposProyecto})">
             <summary>

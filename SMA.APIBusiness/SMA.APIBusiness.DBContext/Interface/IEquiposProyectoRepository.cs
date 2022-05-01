@@ -7,7 +7,7 @@ namespace DBContext
 {
     public interface IEquiposProyectoRepository
     {
-        EntityBaseResponse GetEquipoProyectoRepository();        
+        EntityBaseResponse GetEquipoProyectoRepository(string Codigo_Solicitud);        
 
         EntityBaseResponse Insert(List<EntityEquiposProyecto> equipos);
     }

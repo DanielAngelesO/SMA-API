@@ -314,7 +314,7 @@
             </summary>
             <param name="AnalistaProyecto"></param>
         </member>
-        <member name="M:SMA.APIBusiness.API.Controllers.AnalistasProyectoController.listarxcodigo(System.String)">
+        <member name="M:SMA.APIBusiness.API.Controllers.AnalistasProyectoController.listarxcodigo(System.Int32)">
             <summary>
             
             </summary>
@@ -366,7 +366,7 @@
             </summary>
             <param name="equiposProyecto"></param>
         </member>
-        <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.listarxcodigo(System.String)">
+        <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.listarxcodigo(System.Int32)">
             <summary>
             
             </summary>
@@ -437,6 +437,13 @@
             
             </summary>
             <param name="NombreCliente"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.ObtenerProyecto(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="CodigoServicio"></param>
             <returns></returns>
         </member>
         <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.Insert(DBEntity.EntityOrdenServicio)">

@@ -78,7 +78,20 @@ namespace SMA.APIBusiness.API.Controllers
             return Json(ret);
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="CodigoServicio"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("ObtenerProyecto")]
+        public ActionResult ObtenerProyecto(int CodigoServicio)
+        {
+            var ret = _OrdenServicio.ObtenerProyecto(CodigoServicio);
+            return Json(ret);
+        }
 
         /// <summary>
         /// 

@@ -12,10 +12,9 @@ namespace DBContext
     {
         EntityBaseResponse GetOrdenServicioList();
         EntityBaseResponse GetOrdenServicioList(int CodigoServicio);
-
         EntityBaseResponse GetOrdenServicioList(string NombreCliente);
-
         EntityBaseResponse InsertOrdenServicio(EntityOrdenServicio ordenServicio);
+        EntityBaseResponse ObtenerProyecto(int CodigoServicio);
 
     }
 }

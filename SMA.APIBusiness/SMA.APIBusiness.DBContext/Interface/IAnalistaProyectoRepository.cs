@@ -7,8 +7,7 @@ namespace DBContext
 {
     public interface IAnalistaProyectoRepository
     {
-        EntityBaseResponse GetAnalistaProyectoRepository();
-        EntityBaseResponse ObtenerAnalista(string Codigo_Solicitud);
+        EntityBaseResponse ObtenerAnalistas(int Codigo_Solicitud);
 
         EntityBaseResponse Insert(List<EntityAnalistaProyecto> Analistas);
     }

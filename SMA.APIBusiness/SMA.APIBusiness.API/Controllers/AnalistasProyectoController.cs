@@ -45,9 +45,9 @@ namespace SMA.APIBusiness.API.Controllers
         [AllowAnonymous]
         [HttpGet]
         [Route("listarxcodigo_solicitud")]
-        public ActionResult listarxcodigo(string Codigo_Solicitud)
+        public ActionResult listarxcodigo(int Codigo_Solicitud)
         {
-            var ret = _AnalistaProyecto.ObtenerAnalista(Codigo_Solicitud);
+            var ret = _AnalistaProyecto.ObtenerAnalistas(Codigo_Solicitud);
             return Json(ret);
         }
 

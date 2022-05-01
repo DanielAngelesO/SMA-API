@@ -10,12 +10,8 @@ namespace DBContext
 {
     public class AnalistaProyectoRepository : BaseRepository, IAnalistaProyectoRepository
     {
-        public EntityBaseResponse GetAnalistaProyectoRepository()
-        {
-            throw new NotImplementedException();
-        }
-
-        public EntityBaseResponse ObtenerAnalista(string Codigo_Solicitud)
+    
+        public EntityBaseResponse ObtenerAnalistas(int Codigo_Solicitud)
         {
             var response = new EntityBaseResponse();
 
@@ -23,24 +19,24 @@ namespace DBContext
             {
                 using (var db = GetSqlConnection())
                 {
-                    var servicio = new List<EntityAnalistaProyectoConsulta>();
+                    var analistas = new List<EntityAnalistaProyectoConsulta>();
                     const string sql = "ups_Consulta_Analista_x_Serevicio";
                     var p = new DynamicParameters();
 
                     p.Add(name: "COD_SOLICITUD", value: Codigo_Solicitud, dbType: DbType.String, direction: ParameterDirection.Input);
 
-                    servicio = db.Query<EntityAnalistaProyectoConsulta>(
+                    analistas = db.Query<EntityAnalistaProyectoConsulta>(
                             sql: sql,
                             param: p,
                             commandType: CommandType.StoredProcedure
                         ).ToList();
 
-                    if (servicio.Count > 0)
+                    if (analistas.Count > 0)
                     {
                         response.Issuccess = true;
                         response.ErrorCode = "0000";
                         response.ErrorMessage = String.Empty;
-                        response.Data = servicio;
+                        response.Data = analistas;
                     }
                     else
                     {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DBEntity
 {
-    public class EntityOrdenServcioConsulta
+    public class EntityProyecto
     {
         public string Codigo_Solicitud { get; set; }
         public string Ruc_Cliente { get; set; }
@@ -12,7 +12,7 @@ namespace DBEntity
         public string Correo { get; set; }
         public string Telefono { get; set; }
         public string Contacto { get; set; }
-        public string Codigo_Servicio { get; set; }        
+        public string Codigo_Servicio { get; set; }
         public string Descripcion_Servicio { get; set; }
         public string TipoServicio { get; set; }
         public decimal Precio_Referencia { get; set; }
@@ -25,6 +25,11 @@ namespace DBEntity
         public string Estado_Solicitud { get; set; }
         public string Usuario_Registro { get; set; }
         public DateTime Fecha_Solicitud { get; set; }
+
+        public List<EntityLugaresMuestreo> LugaresMuestreo { get; set; }
+        public List<EntityAnalistaProyectoConsulta> Analistas { get; set; }
+        public List<EntityEquipoProyectoConsulta> Equipos { get; set; }
+
 
     }
 }

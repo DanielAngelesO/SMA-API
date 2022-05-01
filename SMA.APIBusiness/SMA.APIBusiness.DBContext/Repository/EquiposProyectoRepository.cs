@@ -10,7 +10,7 @@ namespace DBContext
 {
     public class EquiposProyectoRepository : BaseRepository, IEquiposProyectoRepository
     {
-        public EntityBaseResponse GetEquipoProyectoRepository(string Codigo_Solicitud)
+        public EntityBaseResponse GetEquiposProyecto(int Codigo_Solicitud)
         {
             var response = new EntityBaseResponse();
 

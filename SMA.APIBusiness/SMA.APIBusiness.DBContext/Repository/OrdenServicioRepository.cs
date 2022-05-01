@@ -224,5 +224,58 @@ namespace DBContext
 
             return response;
         }
+
+        public EntityBaseResponse ObtenerProyecto(int CodigoProyecto)
+        {
+            var response = new EntityBaseResponse();
+
+            try
+            {
+                using (var db = GetSqlConnection())
+                {
+                    var proyecto = new EntityProyecto();
+                    const string sql = "usp_ListarOrdenesServicios_x_Codigo";
+                    var p = new DynamicParameters();
+                    p.Add(name: "@COD_SOLICITUD", value: CodigoProyecto, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
+                    proyecto = db.Query<EntityProyecto>(
+                            sql: sql,
+                            param: p,
+                            commandType: CommandType.StoredProcedure
+                        ).FirstOrDefault();
+
+                    if (proyecto?.Codigo_Solicitud != null)
+                    {
+                        var _AnalistasProyecto = new AnalistaProyectoRepository();
+                        var _EquipoProyecto = new EquiposProyectoRepository();
+                        var _LugaresMuestreo = new LugaresMuestreoRepository();
+                        proyecto.Analistas = _AnalistasProyecto.ObtenerAnalistas(CodigoProyecto)?.Data as List<EntityAnalistaProyectoConsulta>;
+                        proyecto.Equipos = _EquipoProyecto.GetEquiposProyecto(CodigoProyecto)?.Data as List<EntityEquipoProyectoConsulta>;
+
+                        response.Issuccess = true;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = proyecto;
+                    }
+                    else
+                    {
+                        response.Issuccess = false;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = null;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.Issuccess = false;
+                response.ErrorCode = "0001";
+                response.ErrorMessage = ex.Message;
+                response.Data = null;
+            }
+
+            return response;
+        }
     }
 }

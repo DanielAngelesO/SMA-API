@@ -18,24 +18,24 @@ namespace SMA.APIBusiness.API.Controllers
     /// 
     /// </summary>
     [Produces("application/json")]
-    [Route("api/Analista")]
+    [Route("api/Equipo")]
     [ApiController]
-    public class PlanillaAnalistaController : Controller
+    public class EquipoController : Controller
     {
         /// <summary>
         /// Constructor
         /// </summary>
-        protected readonly IPlanillaAnalistaRepository _planillaAnalistaRepository;
+        protected readonly IEquipoRepository _equipoRepository;
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="planillaAnalistaRepository"></param>
-        public PlanillaAnalistaController (IPlanillaAnalistaRepository planillaAnalistaRepository)
+        /// <param name="equipoRepository"></param>
+        public EquipoController (IEquipoRepository equipoRepository)
         {
-            _planillaAnalistaRepository = planillaAnalistaRepository;
-
+            _equipoRepository = equipoRepository;
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -46,21 +46,17 @@ namespace SMA.APIBusiness.API.Controllers
         [Route("listar")]
         public ActionResult Listar()
         {
-            var ret = _planillaAnalistaRepository.GetAnalistas();
+            var ret = _equipoRepository.ListarEquipos();
             return Json(ret);
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="Codigo_Analista"></param>
-        /// <returns></returns>
+
         [Produces("application/json")]
         [AllowAnonymous]
         [HttpPost]
         [Route("listarxcodigo")]
-        public ActionResult Listarxcodigo(string Codigo_Analista)
+        public ActionResult Listarxcodigo(string Codigo_Equipo)
         {
-            var ret = _planillaAnalistaRepository.ValidarCeseAnalista(Codigo_Analista);
+            var ret = _equipoRepository.ListarEquipos(Codigo_Equipo);
             return Json(ret);
         }
 

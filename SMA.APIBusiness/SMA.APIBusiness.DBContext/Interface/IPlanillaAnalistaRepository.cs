@@ -8,6 +8,6 @@ namespace DBContext
     public interface IPlanillaAnalistaRepository
     {
         EntityBaseResponse GetAnalistas();
-        EntityBaseResponse ValidarCeseAnalista(int Codigo_Analista);
+        EntityBaseResponse ValidarCeseAnalista(string Codigo_Analista);
     }
 }

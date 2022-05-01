@@ -127,7 +127,7 @@ namespace API
             services.AddTransient<IAnalistaProyectoRepository, AnalistaProyectoRepository>();
             services.AddTransient<IEquiposProyectoRepository, EquiposProyectoRepository>();
             services.AddTransient<IPlanillaAnalistaRepository, PlanillaAnalistaRepository>();
-            
+            services.AddTransient<IEquipoRepository, EquipoRepository>();
 
 
 
@@ -135,7 +135,7 @@ namespace API
             services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
             services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
 
-
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

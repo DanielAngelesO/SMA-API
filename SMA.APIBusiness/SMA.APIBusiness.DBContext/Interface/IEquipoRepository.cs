@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SMA.APIBusiness.DBContext.Interface
+namespace DBContext
 {
-    internal interface IEquipoRepository
+    public interface IEquipoRepository
     {
         EntityBaseResponse ListarEquipos();
-        EntityBaseResponse ListEquipoRepository(int Codigo_Equipo);
+        EntityBaseResponse ListarEquipos(string Codigo_Equipo);
     }
 }

@@ -321,6 +321,28 @@
             <param name="analistas"></param>
             <returns></returns>
         </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.EquipoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.EquipoController._equipoRepository">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquipoController.#ctor(DBContext.IEquipoRepository)">
+            <summary>
+            
+            </summary>
+            <param name="equipoRepository"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquipoController.Listar">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:SMA.APIBusiness.API.Controllers.EquiposProyectoController">
             <summary>
             
@@ -411,6 +433,19 @@
             
             </summary>
             <param name="planillaAnalistaRepository"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.PlanillaAnalistaController.Listar">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.PlanillaAnalistaController.Listarxcodigo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Codigo_Analista"></param>
+            <returns></returns>
         </member>
         <member name="T:SMA.APIBusiness.API.Controllers.PlanProyectoController">
             <summary>

@@ -40,13 +40,44 @@ namespace SMA.APIBusiness.API.Controllers
         /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
-        [HttpPost]
+        [HttpGet]
         [Route("listar")]
         public ActionResult Listar()
         {
             var ret = _OrdenServicio.GetOrdenServicioList();
             return Json(ret);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="CodigoServicio"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("listarPorCodigo")]
+        public ActionResult Listar(int CodigoServicio)
+        {
+            var ret = _OrdenServicio.GetOrdenServicioList(CodigoServicio);
+            return Json(ret);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="NombreCliente"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("listarPorCliente")]
+        public ActionResult Listar(string NombreCliente)
+        {
+            var ret = _OrdenServicio.GetOrdenServicioList(NombreCliente);
+            return Json(ret);
+        }
+
 
 
         /// <summary>

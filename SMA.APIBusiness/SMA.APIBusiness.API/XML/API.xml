@@ -389,6 +389,20 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.Listar(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="CodigoServicio"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.Listar(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="NombreCliente"></param>
+            <returns></returns>
+        </member>
         <member name="M:SMA.APIBusiness.API.Controllers.OrdenServicioController.Insert(DBEntity.EntityOrdenServicio)">
             <summary>
             

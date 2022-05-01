@@ -17,6 +17,8 @@ namespace DBEntity
         public int Cantidad_Analistas { get; set; }
         public decimal Monto_Viaticos { get; set; }
         public decimal Precio_Final_Servicio { get; set; }
+        public string Estado_Solicitud { get; set; }
+
 
     }
 }

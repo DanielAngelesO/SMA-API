@@ -53,6 +53,100 @@ namespace DBContext
             return response;
         }
 
+        public EntityBaseResponse GetOrdenServicioList(int CodigoServicio)
+        {
+            var response = new EntityBaseResponse();
+
+            try
+            {
+                using (var db = GetSqlConnection())
+                {
+                    var servicio = new List<EntityOrdenServcioConsulta>();
+                    const string sql = "usp_ListarOrdenesServicios_x_Codigo";
+                    var p = new DynamicParameters();                    
+                    p.Add(name: "@COD_SOLICITUD", value: CodigoServicio, dbType: DbType.Int32, direction: ParameterDirection.Input);
+
+                    servicio = db.Query<EntityOrdenServcioConsulta>(
+                            sql: sql,
+                            param: p,
+                            commandType: CommandType.StoredProcedure
+                        ).ToList();
+
+                    if (servicio.Count > 0)
+                    {
+                        response.Issuccess = true;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = servicio;
+                    }
+                    else
+                    {
+                        response.Issuccess = false;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = null;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.Issuccess = false;
+                response.ErrorCode = "0001";
+                response.ErrorMessage = ex.Message;
+                response.Data = null;
+            }
+
+            return response;
+        }
+
+        public EntityBaseResponse GetOrdenServicioList(string NombreCliente)
+        {
+            var response = new EntityBaseResponse();
+
+            try
+            {
+                using (var db = GetSqlConnection())
+                {
+                    var servicio = new List<EntityOrdenServcioConsulta>();
+                    const string sql = "usp_ListarOrdenesServicios_x_Cliente";
+                    var p = new DynamicParameters();
+                    p.Add(name: "@Cliente", value: NombreCliente, dbType: DbType.String, direction: ParameterDirection.Input);
+
+                    servicio = db.Query<EntityOrdenServcioConsulta>(
+                            sql: sql,
+                            param: p,
+                            commandType: CommandType.StoredProcedure
+                        ).ToList();
+
+                    if (servicio.Count > 0)
+                    {
+                        response.Issuccess = true;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = servicio;
+                    }
+                    else
+                    {
+                        response.Issuccess = false;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = null;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.Issuccess = false;
+                response.ErrorCode = "0001";
+                response.ErrorMessage = ex.Message;
+                response.Data = null;
+            }
+
+            return response;
+        }
+
         public EntityBaseResponse InsertOrdenServicio(EntityOrdenServicio ordenServicio)
         {
             var response = new EntityBaseResponse();

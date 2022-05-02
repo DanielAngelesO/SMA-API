@@ -22,7 +22,7 @@ namespace DBContext
             {
                 using (var db = GetSqlConnection())
                 {
-                    const string sql = "US_Insertar_Plan_Proyecto";
+                    const string sql = "usp_Insertar_Plan_Proyecto";
                     var p = new DynamicParameters();
 
                     p.Add(name: "@COD_SOLICITUD", value: plan.Codigo_Solicitud, dbType: DbType.Int32, direction: ParameterDirection.Input);

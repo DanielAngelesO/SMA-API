@@ -9,5 +9,10 @@ namespace DBContext
     {
         EntityBaseResponse ListarEquipos();
         EntityBaseResponse ListarEquipos(string Codigo_Equipo);
+        EntityBaseResponse ListarEquiposOperativos();
+
+
+
+
     }
 }

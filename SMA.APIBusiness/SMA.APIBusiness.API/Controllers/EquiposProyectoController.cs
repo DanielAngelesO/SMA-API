@@ -65,5 +65,20 @@ namespace SMA.APIBusiness.API.Controllers
             var ret = _EquiposProyecto.Insert(equipos);
             return Json(ret);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="equipos"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("ActualizarDevolucion")]
+        public ActionResult ActualizarDevolucion(List<EntityEquiposProyecto> equipos)
+        {
+            var ret = _EquiposProyecto.ActualizarDevolucion(equipos);
+            return Json(ret);
+        }
     }
 }

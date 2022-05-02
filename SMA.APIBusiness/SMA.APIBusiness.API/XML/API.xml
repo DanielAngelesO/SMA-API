@@ -350,6 +350,19 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquipoController.Listarxcodigo(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="Codigo_Equipo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquipoController.ListarOpertivos">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:SMA.APIBusiness.API.Controllers.EquiposProyectoController">
             <summary>
             
@@ -374,6 +387,13 @@
             <returns></returns>
         </member>
         <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.Insert(System.Collections.Generic.List{DBEntity.EntityEquiposProyecto})">
+            <summary>
+            
+            </summary>
+            <param name="equipos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.ActualizarDevolucion(System.Collections.Generic.List{DBEntity.EntityEquiposProyecto})">
             <summary>
             
             </summary>

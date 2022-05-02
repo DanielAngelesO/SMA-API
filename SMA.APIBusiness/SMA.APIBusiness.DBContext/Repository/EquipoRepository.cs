@@ -10,6 +10,7 @@ namespace DBContext
 {
     public class EquipoRepository : BaseRepository, IEquipoRepository
     {
+       
         public EntityBaseResponse ListarEquipos()
         {
             var response = new EntityBaseResponse();
@@ -18,19 +19,19 @@ namespace DBContext
             {
                 using (var db = GetSqlConnection())
                 {
-                    var servicio = new List<EntityEquipo>();
+                    var equipos = new List<EntityEquipo>();
                     const string sql = "ups_ListarEquipos";
-                    servicio = db.Query<EntityEquipo>(
+                    equipos = db.Query<EntityEquipo>(
                             sql: sql,
                             commandType: CommandType.StoredProcedure
                         ).ToList();
 
-                    if (servicio.Count > 0)
+                    if (equipos.Count > 0)
                     {
                         response.Issuccess = true;
                         response.ErrorCode = "0000";
                         response.ErrorMessage = String.Empty;
-                        response.Data = servicio;
+                        response.Data = equipos;
                     }
                     else
                     {
@@ -100,5 +101,48 @@ namespace DBContext
 
             return response;
         }
-     }
+
+        public EntityBaseResponse ListarEquiposOperativos()
+        {
+            var response = new EntityBaseResponse();
+
+            try
+            {
+                using (var db = GetSqlConnection())
+                {
+                    var equipos = new List<EntityEquipo>();
+                    const string sql = "ups_Consulta_Equipos_Operativos";
+                    equipos = db.Query<EntityEquipo>(
+                            sql: sql,
+                            commandType: CommandType.StoredProcedure
+                        ).ToList();
+
+                    if (equipos.Count > 0)
+                    {
+                        response.Issuccess = true;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = equipos;
+                    }
+                    else
+                    {
+                        response.Issuccess = false;
+                        response.ErrorCode = "0000";
+                        response.ErrorMessage = String.Empty;
+                        response.Data = null;
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.Issuccess = false;
+                response.ErrorCode = "0001";
+                response.ErrorMessage = ex.Message;
+                response.Data = null;
+            }
+
+            return response;
+        }
+    }
 }

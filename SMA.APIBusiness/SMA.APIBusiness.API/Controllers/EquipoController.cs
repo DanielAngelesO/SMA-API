@@ -50,6 +50,11 @@ namespace SMA.APIBusiness.API.Controllers
             return Json(ret);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Codigo_Equipo"></param>
+        /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
         [HttpGet]
@@ -60,6 +65,19 @@ namespace SMA.APIBusiness.API.Controllers
             return Json(ret);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("listarOperativos")]
+        public ActionResult ListarOpertivos()
+        {
+            var ret = _equipoRepository.ListarEquiposOperativos();
+            return Json(ret);
+        }
 
     }
 }

@@ -13,6 +13,7 @@ namespace DBEntity
         public string Serie { get; set; }
         public string Estado { get; set; }
         public string Ubicacion { get; set; }
+        public DateTime Fecha_Salida { get; set; }
 
     }
 }

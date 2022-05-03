@@ -10,7 +10,7 @@ namespace DBEntity
         public string Ruc_Cliente { get; set; }
         public string Razon_Social { get; set; }
         public string Correo { get; set; }
-        public string Telefeono { get; set; }
+        public string Telefono { get; set; }
         public string Contacto { get; set; }
         
 

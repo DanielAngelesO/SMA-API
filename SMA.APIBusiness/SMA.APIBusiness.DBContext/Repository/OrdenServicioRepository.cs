@@ -161,10 +161,10 @@ namespace DBContext
                     p.Add(name: "@RUC_CLIENTE", value: ordenServicio.Cliente.Ruc_Cliente, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@RAZON_SOCIAL", value: ordenServicio.Cliente.Razon_Social, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@CORREO", value: ordenServicio.Cliente.Correo, dbType: DbType.String, direction: ParameterDirection.Input);
-                    p.Add(name: "@TELEFONO", value: ordenServicio.Cliente.Telefeono, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@TELEFONO", value: ordenServicio.Cliente.Telefono, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@CONTACTO", value: ordenServicio.Cliente.Contacto, dbType: DbType.String, direction: ParameterDirection.Input);
                     p.Add(name: "@COD_SERVICIO", value: ordenServicio.Cod_Servicio , dbType: DbType.String, direction: ParameterDirection.Input);
-                    p.Add(name: "@FECHA_SOLICITUD", value: ordenServicio.Fecha_Solicitud, dbType: DbType.DateTime, direction: ParameterDirection.Input);
+                    p.Add(name: "@FECHA_SOLICITUD", value: DateTime.Now, dbType: DbType.DateTime, direction: ParameterDirection.Input);
                     p.Add(name: "@FECHA_TENTATIVA", value: ordenServicio.Fecha_Tentativa, dbType: DbType.DateTime, direction: ParameterDirection.Input);
                     p.Add(name: "@USUARIO_REGISTRO", value: ordenServicio.Usuario_Registro, dbType: DbType.String, direction: ParameterDirection.Input);
 

@@ -251,6 +251,7 @@ namespace DBContext
                         var _LugaresMuestreo = new LugaresMuestreoRepository();
                         proyecto.Analistas = _AnalistasProyecto.ObtenerAnalistas(CodigoProyecto)?.Data as List<EntityAnalistaProyectoConsulta>;
                         proyecto.Equipos = _EquipoProyecto.GetEquiposProyecto(CodigoProyecto)?.Data as List<EntityEquipoProyectoConsulta>;
+                        proyecto.LugaresMuestreo = _LugaresMuestreo.GetLugaresMuestreo(CodigoProyecto)?.Data as List<EntityLugaresMuestreoConsulta>;
 
                         response.Issuccess = true;
                         response.ErrorCode = "0000";

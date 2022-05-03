@@ -45,7 +45,7 @@ namespace SMA.APIBusiness.API.Controllers
         [Route("ListarPorServicio")]
         public ActionResult ListarLugaresMuestro(int Cod_Orden)
         {
-            var ret = _LugaresMuestreo.GetLugaresMuestreoRepository(Cod_Orden);
+            var ret = _LugaresMuestreo.GetLugaresMuestreo(Cod_Orden);
             return Json(ret);
         }
 

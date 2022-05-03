@@ -26,7 +26,7 @@ namespace DBEntity
         public string Usuario_Registro { get; set; }
         public DateTime Fecha_Solicitud { get; set; }
 
-        public List<EntityLugaresMuestreo> LugaresMuestreo { get; set; }
+        public List<EntityLugaresMuestreoConsulta> LugaresMuestreo { get; set; }
         public List<EntityAnalistaProyectoConsulta> Analistas { get; set; }
         public List<EntityEquipoProyectoConsulta> Equipos { get; set; }
 

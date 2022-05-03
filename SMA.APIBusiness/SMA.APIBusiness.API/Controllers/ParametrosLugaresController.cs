@@ -17,52 +17,52 @@ namespace SMA.APIBusiness.API.Controllers
     /// 
     /// </summary>
     [Produces("application/json")]
-    [Route("api/LugaresMuestreo")]
+    [Route("api/Parametros")]
     [ApiController]
-    public class LugaresMuestreoController : Controller
+    public class ParametrosLugaresController : Controller
     {
         /// <summary>
         /// 
         /// </summary>
-        protected readonly ILugaresMuestreoRepository _LugaresMuestreo;
+        protected readonly IParametrosLugarMuestraRepository _parametrosLugarMuestraRepository;
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="lugaresMuestreo"></param>
-        public LugaresMuestreoController(ILugaresMuestreoRepository lugaresMuestreo)
+        /// <param name="parametrosLugarMuestra"></param>
+        public ParametrosLugaresController(IParametrosLugarMuestraRepository parametrosLugarMuestra)
         {
-            _LugaresMuestreo = lugaresMuestreo;
+            _parametrosLugarMuestraRepository = parametrosLugarMuestra;
         }
+
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="Cod_Orden"></param>
+        /// <param name="CodigoSolicitud"></param>
         /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
         [HttpGet]
         [Route("ListarPorServicio")]
-        public ActionResult ListarLugaresMuestro(int Cod_Orden)
+        public ActionResult ListarParametros(int CodigoSolicitud)
         {
-            var ret = _LugaresMuestreo.GetLugaresMuestreoRepository(Cod_Orden);
+            var ret = _parametrosLugarMuestraRepository.ListarPorServicio(CodigoSolicitud);
             return Json(ret);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="lugares"></param>
+        /// <param name="parametros"></param>
         /// <returns></returns>
         [Produces("application/json")]
         [AllowAnonymous]
         [HttpPost]
         [Route("insert")]
-        public ActionResult Insert(List<EntityLugaresMuestreo> lugares)
+        public ActionResult Insert(List<EntityParametrosLugarMuestra> parametros)
         {
-            var ret = _LugaresMuestreo.Insert(lugares);
+            var ret = _parametrosLugarMuestraRepository.Insert(parametros);
             return Json(ret);
         }
-
     }
 }

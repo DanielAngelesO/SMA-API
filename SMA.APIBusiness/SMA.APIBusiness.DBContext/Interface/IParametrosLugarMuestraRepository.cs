@@ -7,9 +7,9 @@ namespace DBContext
 {
     public interface IParametrosLugarMuestraRepository
     {
-        EntityBaseResponse ListarLugaresMuestreo(string Cod_Orden);
+        EntityBaseResponse ListarPorServicio(int CodigoSolicitud);
+        EntityBaseResponse Insert(List<EntityParametrosLugarMuestra> parametros);
 
-        EntityBaseResponse ObtenerLugaresMuestreo();
  
     }
 }

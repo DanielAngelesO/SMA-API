@@ -20,10 +20,10 @@ namespace DBContext
                 using (var db = GetSqlConnection())
                 {
                     var analistas = new List<EntityAnalistaProyectoConsulta>();
-                    const string sql = "ups_Consulta_Analista_x_Serevicio";
+                    const string sql = "usp_Consulta_Analista_x_Serevicio";
                     var p = new DynamicParameters();
 
-                    p.Add(name: "COD_SOLICITUD", value: Codigo_Solicitud, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@COD_SOLICITUD", value: Codigo_Solicitud, dbType: DbType.String, direction: ParameterDirection.Input);
 
                     analistas = db.Query<EntityAnalistaProyectoConsulta>(
                             sql: sql,

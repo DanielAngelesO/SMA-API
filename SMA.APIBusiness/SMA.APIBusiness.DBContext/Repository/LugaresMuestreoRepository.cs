@@ -10,7 +10,7 @@ namespace DBContext
 {
     public class LugaresMuestreoRepository : BaseRepository, ILugaresMuestreoRepository
     {
-        public EntityBaseResponse GetLugaresMuestreoRepository(string Cod_Orden)
+        public EntityBaseResponse GetLugaresMuestreoRepository(int Cod_Orden)
         {
             var response = new EntityBaseResponse();
 
@@ -22,7 +22,7 @@ namespace DBContext
                     const string sql = "usp_Consulta_LugaresMuestreo_x_Servicio";
                     var p = new DynamicParameters();
 
-                    p.Add(name: "COD_SOLICITUD", value: Cod_Orden, dbType: DbType.String, direction: ParameterDirection.Input);
+                    p.Add(name: "@COD_SOLICITUD", value: Cod_Orden, dbType: DbType.String, direction: ParameterDirection.Input);
 
                     servicio = db.Query<EntityLugaresMuestreoConsulta>(
                             sql: sql,

@@ -414,7 +414,14 @@
             <summary>
             
             </summary>
-            <param name="OrdenServicio"></param>
+            <param name="lugaresMuestreo"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.LugaresMuestreoController.ListarLugaresMuestro(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="Cod_Orden"></param>
+            <returns></returns>
         </member>
         <member name="M:SMA.APIBusiness.API.Controllers.LugaresMuestreoController.Insert(System.Collections.Generic.List{DBEntity.EntityLugaresMuestreo})">
             <summary>
@@ -471,6 +478,36 @@
             
             </summary>
             <param name="servicio"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SMA.APIBusiness.API.Controllers.ParametrosLugaresController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SMA.APIBusiness.API.Controllers.ParametrosLugaresController._parametrosLugarMuestraRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.ParametrosLugaresController.#ctor(DBContext.IParametrosLugarMuestraRepository)">
+            <summary>
+            
+            </summary>
+            <param name="parametrosLugarMuestra"></param>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.ParametrosLugaresController.ListarParametros(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="CodigoSolicitud"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.ParametrosLugaresController.Insert(System.Collections.Generic.List{DBEntity.EntityParametrosLugarMuestra})">
+            <summary>
+            
+            </summary>
+            <param name="parametros"></param>
             <returns></returns>
         </member>
         <member name="T:SMA.APIBusiness.API.Controllers.PlanillaAnalistaController">

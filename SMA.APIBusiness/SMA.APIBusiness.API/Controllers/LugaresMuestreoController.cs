@@ -35,6 +35,16 @@ namespace SMA.APIBusiness.API.Controllers
             _LugaresMuestreo = OrdenServicio;
         }
 
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpPost]
+        [Route("Obtener_Lugares_Por_Codigo")]
+        public ActionResult Obtener_Lugares_Por_Codigo(string Cod_Orden)
+        {
+            var ret = _LugaresMuestreo.GetLugaresMuestreoRepository(Cod_Orden);
+            return Json(ret);
+        }
+
         /// <summary>
         /// 
         /// </summary>

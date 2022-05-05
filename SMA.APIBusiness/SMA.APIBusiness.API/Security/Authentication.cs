@@ -17,7 +17,7 @@ namespace API.Security
         /// 
         /// </summary>
         /// <returns></returns>
-        public async Task<string> GenerateToken(string numeroDocumento, string codigoUsuario)
+        public async Task<string> GenerateToken(string UserPerfil, string codigoUsuario)
         {
             var client = new HttpClient();
 
@@ -46,7 +46,7 @@ namespace API.Security
                     Scope = "email",
                     Parameters =
                     {
-                        { "client_numero_documento", $"{numeroDocumento}"},
+                        { "client_Perfil", $"{UserPerfil}"},
                         { "client_codigo_usuario", $"{codigoUsuario}" }
                     }
                 });

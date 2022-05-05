@@ -99,18 +99,19 @@ namespace SMA.APIBusiness.API.Controllers
         /// <param name="servicio"></param>
         /// <returns></returns>
         [Produces("application/json")]
-        [AllowAnonymous]
+        [Authorize]
         [HttpPost]
         [Route("insert")]
         public ActionResult Insert(EntityOrdenServicio servicio)
         {
-            //var identity = User.Identity as ClaimsIdentity;
-            //IEnumerable<Claim> claims = identity.Claims;
+            var identity = User.Identity as ClaimsIdentity;
+            IEnumerable<Claim> claims = identity.Claims;
 
-            //var userid = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
-            //var useidn = claims.Where(p => p.Type == "").FirstOrDefault()?.Value;
+            var userid = claims.Where(p => p.Type == "client_codigo_usuario").FirstOrDefault()?.Value;
+            var userperfil = claims.Where(p => p.Type == "client_Perfil").FirstOrDefault()?.Value;
 
-            //servicio.Usuario_Registro = userid;
+
+            servicio.Usuario_Registro = userid;
 
 
             var ret = _OrdenServicio.InsertOrdenServicio(servicio); 

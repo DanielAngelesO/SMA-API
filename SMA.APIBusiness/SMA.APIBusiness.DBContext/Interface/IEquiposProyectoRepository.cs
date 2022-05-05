@@ -11,5 +11,8 @@ namespace DBContext
         EntityBaseResponse Insert(List<EntityEquiposProyecto> equipos);
         EntityBaseResponse ActualizarDevolucion(List<EntityEquiposProyecto> equipos);
 
+        EntityBaseResponse ActualizarAprobacionEquipos(string CodigoSolicitud);
+
+
     }
 }

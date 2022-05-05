@@ -400,6 +400,13 @@
             <param name="equipos"></param>
             <returns></returns>
         </member>
+        <member name="M:SMA.APIBusiness.API.Controllers.EquiposProyectoController.AprobacionEquipos(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="CodigoSolicitud"></param>
+            <returns></returns>
+        </member>
         <member name="T:SMA.APIBusiness.API.Controllers.LugaresMuestreoController">
             <summary>
             

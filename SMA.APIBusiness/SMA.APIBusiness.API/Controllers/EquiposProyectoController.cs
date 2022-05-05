@@ -80,5 +80,21 @@ namespace SMA.APIBusiness.API.Controllers
             var ret = _EquiposProyecto.ActualizarDevolucion(equipos);
             return Json(ret);
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="CodigoSolicitud"></param>
+        /// <returns></returns>
+        [Produces("application/json")]
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("Aprobar")]
+        public ActionResult AprobacionEquipos(string CodigoSolicitud)
+        {
+            var ret = _EquiposProyecto.ActualizarAprobacionEquipos(CodigoSolicitud);
+            return Json(ret);
+
+        }
     }
 }

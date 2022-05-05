@@ -34,10 +34,10 @@ namespace API.IS
         /// <returns></returns>
         public Task ValidateAsync(CustomTokenRequestValidationContext context)
         {
-            var numero_documento = context.Result.ValidatedRequest.Raw.Get("client_numero_documento");
+            var Perfil = context.Result.ValidatedRequest.Raw.Get("client_Perfil");
             var codigo_usuario = context.Result.ValidatedRequest.Raw.Get("client_codigo_usuario");
             context.Result.ValidatedRequest.Client.AlwaysSendClientClaims = true;
-            context.Result.ValidatedRequest.ClientClaims.Add(new Claim("numero_documento", numero_documento));
+            context.Result.ValidatedRequest.ClientClaims.Add(new Claim("perfil_usuario", Perfil));
             context.Result.ValidatedRequest.ClientClaims.Add(new Claim("codigo_usuario", codigo_usuario));
             return Task.FromResult(0);
         }

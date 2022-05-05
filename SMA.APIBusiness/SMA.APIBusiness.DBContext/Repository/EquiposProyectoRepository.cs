@@ -152,5 +152,46 @@ namespace DBContext
 
             return response;
         }
+
+        public EntityBaseResponse ActualizarAprobacionEquipos(string CodigoSolicitud)
+        {
+            var response = new EntityBaseResponse();
+            try
+            {
+                using (var db = GetSqlConnection())
+                {
+                    const string sql = "usp_Actualizar_Aprobacion_Equipo";
+
+                    var p = new DynamicParameters();
+
+                    p.Add(name: "@@COD_SOLICITUD", value: CodigoSolicitud, dbType: DbType.Int32, direction: ParameterDirection.Input);                    
+
+                    db.Query<EntityEquiposProyecto>(
+                        sql,
+                        param: p,
+                        commandType: CommandType.StoredProcedure
+                        ).FirstOrDefault();
+
+                    response.Issuccess = true;
+                    response.ErrorCode = "0000";
+                    response.ErrorMessage = String.Empty;
+                    response.Data = new
+                    {
+                        CodeResponse = 0,
+                        MessageResponse = ""
+                    };
+
+                }
+            }
+            catch (Exception ex)
+            {
+                response.Issuccess = false;
+                response.ErrorCode = "0001";
+                response.ErrorMessage = ex.Message;
+                response.Data = null;
+            }
+
+            return response;
+        }
     }
 }
